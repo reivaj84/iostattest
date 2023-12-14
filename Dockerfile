@@ -1,8 +1,8 @@
-FROM registry.access.redhat.com/ubi8
+FROM registry.access.redhat.com/ubi8/ubi-init
 #FROM fedora:39
 
-RUN dnf install -y sysstat \
-  	&& dnf clean all \
+RUN yum -y install sysstat \
+  	&& yum clean all \
   	&& rm -rf /var/cache/yum
 
 #ADD myecho /usr/local/bin

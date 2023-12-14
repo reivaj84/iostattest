@@ -1,5 +1,5 @@
-#FROM registry.access.redhat.com/ubi8
-FROM fedora:39
+FROM registry.access.redhat.com/ubi8
+#FROM fedora:39
 
 RUN dnf install -y sysstat \
   	&& dnf clean all \
